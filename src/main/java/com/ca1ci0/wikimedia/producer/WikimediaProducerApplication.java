@@ -30,8 +30,8 @@ public class WikimediaProducerApplication {
     return args -> {
       Flux<ServerSentEvent<String>> eventStream = service.consume(wikimediaSseUri);
 
-      eventStream.subscribe(ctx ->
-          Optional.ofNullable(ctx)
+      eventStream.subscribe(event ->
+          Optional.ofNullable(event)
               .map(ServerSentEvent::data)
               .ifPresentOrElse(
                   data -> {
