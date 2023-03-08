@@ -38,7 +38,7 @@ public class WikimediaProducerApplication {
                     log.info("Wikimedia event msg: {}", data);
                     kafkaProducer.produce(wikimediaTopic, data);
                   },
-                  () -> log.info("Skipping nullable event")));
+                  () -> log.info("Skipped null-data event")));
     };
   }
 }
