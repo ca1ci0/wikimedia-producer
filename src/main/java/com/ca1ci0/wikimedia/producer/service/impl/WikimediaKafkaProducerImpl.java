@@ -15,7 +15,7 @@ public class WikimediaKafkaProducerImpl implements WikimediaKafkaProducer {
 
   @Override
   public void produce(String topic, String msg) {
-    log.info("Sending message(length={}) to {} topic", msg.length(), topic);
+    log.info("Sending message to {} topic", topic);
     kafkaTemplate.send(topic, msg);
   }
 }

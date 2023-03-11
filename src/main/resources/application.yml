@@ -9,5 +9,4 @@ wikimedia:
   sse:
     host: "https://stream.wikimedia.org"
     endpoint: "/v2/stream/recentchange"
-  kafka:
-    topic: "wikimedia.recentchange"
+  kafka.topic: "wikimedia.recentchange"

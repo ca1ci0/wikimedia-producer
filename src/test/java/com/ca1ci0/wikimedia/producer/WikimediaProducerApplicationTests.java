@@ -9,5 +9,4 @@ class WikimediaProducerApplicationTests {
   @Test
   void contextLoads() {
   }
-
 }
